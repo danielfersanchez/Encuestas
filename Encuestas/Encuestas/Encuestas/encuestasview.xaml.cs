@@ -12,17 +12,19 @@ namespace Encuestas
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class encuestasview : ContentPage
 	{
-		public encuestasview ()
-		{
-			InitializeComponent ();
+        public encuestasview()
+        {
+            InitializeComponent();
             Botonmas.Clicked += Botonmas_Clicked;
             MessagingCenter.Subscribe<ContentPage, encuesta>(this, mensaje.encuestacompleta, (Sender, args)
                 =>
-            { panel.Children.Add(new Label()
             {
-                Text = args.ToString()
+                panel.Children.Add(new Label()
+                {
+                    Text = args.ToString()
 
 
+                });
             });
             }
 
