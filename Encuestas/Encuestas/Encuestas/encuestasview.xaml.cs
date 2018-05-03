@@ -15,6 +15,20 @@ namespace Encuestas
 		public encuestasview ()
 		{
 			InitializeComponent ();
-		}
-	}
+            Botonmas.Clicked += Botonmas_Clicked;
+            MessagingCenter.Subscribe<ContentPage, encuesta>(this, mensaje.encuestacompleta, (Sender, args)
+                =>
+            { panel.Children.Add(new Label()
+            {
+                Text = args.ToString()
+
+
+            });
+            }
+
+        private async void Botonmas_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new detalleencuesta());
+        }
+    }
 }

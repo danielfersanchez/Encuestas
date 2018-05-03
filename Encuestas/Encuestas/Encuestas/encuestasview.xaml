@@ -8,7 +8,7 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"> </RowDefinition>
         </Grid.RowDefinitions>
-        <Button  x:Name="Botonmas" Text="+"></Button>
+        <Button  x:Name="Botonmas" Text="+" Style="{StaticResource Botonmas}"></Button>
         <StackLayout  Grid.Row="1" x:Name="panel">
             
         </StackLayout>
